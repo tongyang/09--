@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E6D343EA-897E-44C0-8D5E-D0991B33AB44}</ProjectGuid>
+    <ProjectGuid>{EAC921A0-C269-42C0-9791-C92B46AEC506}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_09_面向对象继承</RootNamespace>
-    <AssemblyName>09-面向对象继承</AssemblyName>
+    <RootNamespace>复习</RootNamespace>
+    <AssemblyName>复习</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,17 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\复习\复习.csproj">
-      <Project>{eac921a0-c269-42c0-9791-c92b46aec506}</Project>
-      <Name>复习</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
