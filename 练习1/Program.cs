@@ -12,7 +12,12 @@ namespace 练习1
         {
             //Practice1();
             //Practice2();
-            Practice3();
+            //Practice3();
+            //Test();
+            //Practice4();
+            //Practice5();
+            //Practice6();
+            Practice7();
         }
 
         public static void Practice1()
@@ -51,6 +56,91 @@ namespace 练习1
             char[] chs = {'-'};
             string[] strs = str.Split(chs, StringSplitOptions.RemoveEmptyEntries);
             Console.WriteLine("您输入的时间为：{0}年{1}月{2}日", strs[0], strs[1], strs[2]);
+            Console.ReadKey();
+        }
+
+        public static void Test()
+        {
+            string str = "今天天气好晴朗，天天处处好风光。";
+            int[] indexs = new int[str.Length];
+            for (int i = 0; i < str.Length; i++)
+            {
+                int index = str.IndexOf('天', i);
+                indexs[i] = index;
+            }
+            // 去重
+            indexs = indexs.Distinct().ToArray();
+            // 去掉负值
+            
+            foreach (int temp in indexs)
+            {
+                Console.WriteLine(temp);
+            }
+            Console.ReadKey();
+        }
+
+        public static void Practice4()
+        {
+            Console.WriteLine("请输入一串字符：");
+            string str = Console.ReadLine();
+            StringBuilder sb = new StringBuilder(str.Length);
+            for (int i = str.Length - 1; i >= 0 ; i--)
+            {
+                sb.Append(str[i]);
+            }
+            str = sb.ToString();
+            Console.WriteLine(str);
+            Console.ReadKey();
+        }
+
+        public static void Practice5()
+        {
+            Console.WriteLine("请输出一句标准英文：");
+            string str = Console.ReadLine();
+            char[] chs = { ' '};
+            string[] strs = str.Split(chs);
+            Array.Reverse(strs);
+            for (int i = 0; i < strs.Length - 1; i++)
+            {
+                Console.Write(strs[i] + " ");
+                
+            }
+            Console.Write(strs[strs.Length - 1]);
+            Console.ReadKey();
+        }
+
+        public static void Practice6()
+        {
+            Console.WriteLine("请输入您的邮箱地址：");
+            string email = Console.ReadLine();
+            char[] chs = { '@' };
+            string[] strs = email.Split(chs);
+            Console.WriteLine("您的账号名为：{0}，域名为：{1}", strs[0], strs[1]);
+            Console.ReadKey();
+        }
+
+        public static void Practice7()
+        {
+            string str = "《皮皮鲁与鲁西西的奇幻历险记》    郑渊洁";
+            char[] chs = { ' '};
+            string[] strs = str.Split(chs);
+            str =  string.Join("|", strs);
+            for (int i = 0; i < strs.Length; i++)
+            {
+                if (string.IsNullOrEmpty(strs[i]) == false)
+                {
+                    if (strs[i].Length > 10)
+                    {
+                        string temp = strs[i].Substring(0, 8);
+                        temp += "...";
+                        Console.Write(temp);
+                    }
+                    else
+                    {
+                        Console.Write(strs[i]);
+                    }
+                }
+            }
             Console.ReadKey();
         }
     }
