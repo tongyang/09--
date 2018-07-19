@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,10 @@ namespace 练习1
             //Practice4();
             //Practice5();
             //Practice6();
-            Practice7();
+            //Practice7();
+            //Practice8();
+            //Practice9();
+            Practice10();
         }
 
         public static void Practice1()
@@ -121,26 +125,69 @@ namespace 练习1
 
         public static void Practice7()
         {
-            string str = "《皮皮鲁与鲁西西的奇幻历险记》    郑渊洁";
+            string filePath = @"D:\WorkSpace\09-面向对象继承\1.txt";
+            string[] contents = File.ReadAllLines(filePath, System.Text.Encoding.Default);
             char[] chs = { ' '};
-            string[] strs = str.Split(chs);
-            str =  string.Join("|", strs);
-            for (int i = 0; i < strs.Length; i++)
+            string[] content = new string[2];
+            for (int i = 0; i < contents.Length; i++)
             {
-                if (string.IsNullOrEmpty(strs[i]) == false)
+                content = contents[i].Split(chs, StringSplitOptions.RemoveEmptyEntries);
+                for (int j = 0; j < content.Length; j++)
                 {
-                    if (strs[i].Length > 10)
+                    if (content[j].Length > 10)
                     {
-                        string temp = strs[i].Substring(0, 8);
-                        temp += "...";
-                        Console.Write(temp);
-                    }
-                    else
-                    {
-                        Console.Write(strs[i]);
+                        content[j] = content[j].Substring(0, 8) + "......";
                     }
                 }
+                contents[i] = string.Join("|", content);
+                Console.WriteLine(contents[i]);
             }
+            Console.ReadKey();
+        }
+
+        public static void Practice8()
+        {
+            Console.WriteLine("请输入随意一行语句，最好包含多个字母e：");
+            string str = Console.ReadLine();
+            int[] indexs = new int[str.Length];
+            for (int i = 0; i < str.Length; i++)
+            {
+                int index = str.IndexOf('e', i);
+                indexs[i] = index;
+            }
+            indexs = indexs.Distinct().ToArray();
+            for (int i = 0; i < indexs.Length; i++)
+            {
+                if (indexs[i] >= 0)
+                {
+                    Console.WriteLine("第{0}次出现在{1}位", i + 1, indexs[i] + 1);
+                }
+            }
+            Console.ReadKey();
+        }
+
+        public static void Practice9()
+        {
+            Console.WriteLine("请您随意输入一段话：");
+            string str = Console.ReadLine();
+            if (str.Contains("邪恶"))
+            {
+                str = str.Replace("邪恶", "**");
+            }
+            Console.WriteLine(str);
+            Console.ReadKey();
+        }
+
+        public static void Practice10()
+        {
+            string[] names = { "诸葛亮", "鸟叔", "卡卡西", "卡哇伊" };
+            StringBuilder sb = new StringBuilder(names.Length);
+
+            string str = string.Join("|", names);
+            Console.WriteLine(str);
+            Console.ReadKey();
+            str = str.Replace("|", "");
+            Console.WriteLine(str);
             Console.ReadKey();
         }
     }
