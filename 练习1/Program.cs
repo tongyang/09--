@@ -32,6 +32,7 @@ namespace 练习1
             Console.ReadKey();
             
         }
+
         public static void Practice2()
         {
             Console.WriteLine("请输入您喜欢的课程名称：");
@@ -51,7 +52,7 @@ namespace 练习1
                 Console.WriteLine("你们喜欢的课程不同");
             }
             Console.ReadKey();
-        }
+        }   
 
         public static void Practice3()
         {
