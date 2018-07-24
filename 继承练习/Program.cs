@@ -12,6 +12,9 @@ namespace 继承练习
         {
             Reporter rep = new Reporter(30, "童扬", "打篮球");
             rep.SayHello(rep.Name, rep.Habbit);
+
+            Driver dr = new Driver("劳改", 19);
+            
             Console.ReadKey();
         }
     }

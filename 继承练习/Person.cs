@@ -8,6 +8,7 @@ namespace 继承练习
 {
     class Person
     {
+        public int _sex;
         private int _age;
         private string _name;
 
@@ -18,6 +19,11 @@ namespace 继承练习
         {
             this.Age = age;
             this.Name = name;
+        }
+
+        public void Test()
+        {
+            Console.WriteLine(_sex);
         }
     }
 }

@@ -8,6 +8,7 @@ namespace 继承练习
 {
     class Reporter : Person
     {
+        
         private string _habbit;
         public string Habbit { get => _habbit; set => _habbit = value; }
 
