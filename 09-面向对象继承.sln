@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "继承", "继承\继承.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "继承练习", "继承练习\继承练习.csproj", "{4718BCA6-6958-4604-9181-3A5FE10F6107}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "里式转换练习", "里式转换练习\里式转换练习.csproj", "{004106AC-5AC8-45E5-94FE-1A6F4D3C9907}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{4718BCA6-6958-4604-9181-3A5FE10F6107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4718BCA6-6958-4604-9181-3A5FE10F6107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4718BCA6-6958-4604-9181-3A5FE10F6107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004106AC-5AC8-45E5-94FE-1A6F4D3C9907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004106AC-5AC8-45E5-94FE-1A6F4D3C9907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004106AC-5AC8-45E5-94FE-1A6F4D3C9907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004106AC-5AC8-45E5-94FE-1A6F4D3C9907}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
