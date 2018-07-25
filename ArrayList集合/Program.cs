@@ -20,6 +20,7 @@ namespace ArrayList集合
             list.AddRange(new int[] { 1, 3, 4, 55 });
             list.Add('男');
             list.AddRange(list);
+            list.AddRange(list);
             // 清空元素
             //list.Clear();
 
@@ -35,6 +36,9 @@ namespace ArrayList集合
             {
                 Console.WriteLine(list[i]);
             }
+            
+            Console.WriteLine(list.Count);
+            Console.WriteLine(list.Capacity);
             Console.ReadKey();
         }
 
